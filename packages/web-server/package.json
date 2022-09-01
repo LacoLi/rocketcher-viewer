@@ -20,6 +20,7 @@
     "eslint-config-react-app": "^7.0.1",
     "fastify-modular-request": "0.6.7",
     "fastify-modular-route": "0.6.9",
+    "gsap": "^3.11.0",
     "koreaats-lib-io-v1": "^0.2.59",
     "lodash": "^4.17.21",
     "pito": "^0.3.3",
