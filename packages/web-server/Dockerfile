@@ -8,4 +8,8 @@ WORKDIR /usr/src/app
 
 COPY . .
 
+RUN yarn install
+
+EXPOSE 9998
+
 CMD ["yarn", "run", "web-start"]

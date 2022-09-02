@@ -7,11 +7,12 @@
   "scripts": {
     "----- Web Server -----": "",
     "web-start": "cd packages/web-server && react-scripts start",
-    "web-build": "docker build -f packages/web-server .",
+    "web-build": "docker build -f packages/web-server/Dockerfile . -t rocketcher-web:0.0.1",
     "----- Back Server -----": "",
     "back-start": "cd packages/back-server && nodemon --exec ts-node src/index.ts",
+    "back-build": "docker build -f packages/back-server/Dockerfile . -t rocketcher-back:0.0.1",
     "----- All Server -----": "",
-    "all-start": "yarn back-start & yarn web-start"
+    "all-start": "docker compose -p rocketcher up -d"
   },
   "devDependencies": {
     "express": "^4.18.1",
