@@ -1,5 +1,5 @@
 [Unit]
-Description=rocketcher service
+Description=rocketcher back service
 
 [Service]
 Type=simple
