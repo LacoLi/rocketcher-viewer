@@ -16,13 +16,11 @@
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
     & > .mascot {
-      padding-top: 80px;
-      width: 350px;
-      height: 300px;
+      width: 200px;
+      height: 200px;
       bottom: 0px;
-      right: -150px;
+      right: -70px;
       position: absolute;
-      overflow: hidden;
     }
 
     & > .wrapper {
@@ -101,8 +99,8 @@
       }
 
       & > .mascot {
-        width: 150px;
-        height: 180px;
+        width: 100px;
+        height: 100px;
         bottom: 0px;
         right: 0px;
       }
