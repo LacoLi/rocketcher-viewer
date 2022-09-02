@@ -32,6 +32,9 @@ app.get("/show/:id", (req: Request, res: Response) => {
     const id = req.params.id;
     const data = pocket[id];
 
+    console.log("Show ID - Pocket: ", pocket);
+    console.log("Show ID - Data: ", data);
+
     if (data) {
       const diff = new Date(Date.now() - data.lastHunt);
       const DD = diff.getUTCDate() - 1;
@@ -70,6 +73,7 @@ app.get("/show/:id", (req: Request, res: Response) => {
 app.get("/update/:id", (req: Request, res: Response) => {
   function updateData(key: string) {
     if (req.query[key]) {
+      console.log("Update: ", req.params.id, ", ", key, ", ", req.query[key]);
       pocket[req.params.id][key] = req.query[key];
     }
   }

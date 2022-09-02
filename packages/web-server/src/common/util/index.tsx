@@ -1,3 +1,5 @@
+import React from 'react';
+
 namespace Util {
   export namespace is {
     export function string(data: any): data is string {
@@ -28,6 +30,65 @@ namespace Util {
       return data === undefined || data === null;
     }
   }
+
+  export namespace interval {
+    export const useInterval = (callback: Function, delay: number) => {
+      const savedCallback = React.useRef<Function>();
+
+      React.useEffect(() => {
+        savedCallback.current = callback;
+      });
+
+      React.useEffect(() => {
+        function tick() {
+          if (savedCallback.current !== undefined) {
+            savedCallback.current();
+          }
+        }
+
+        let id = setInterval(tick, delay);
+        return () => clearInterval(id);
+      }, [delay]);
+    };
+  }
+
+  export namespace format {
+    /**
+     * 숫자에 콤마 추가
+     * @param data 콤마를 추가 할 문자열 또는 숫자
+     * @returns
+     */
+    export const insertComma = (data: string | number) => {
+      let str = typeof data === 'number' ? data.toString() : onlyNumber(data);
+      return str.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',');
+    };
+
+    interface IOnlyNumber {
+      (data: string): string;
+      (data: string, allowComma: boolean): string;
+      (data: string, allowComma: boolean, firstZero: boolean): string;
+    }
+    /**
+     * 문자열에서 숫자만 남기고 모두 제거
+     * @param data 숫자만 남길 문자열
+     * @param allowComma 콤마를 추가 할 문자
+     * @param firstZero 숫자 앞 0 제외체크
+     * @returns
+     */
+    const onlyNumber: IOnlyNumber = (data: string, addComma: boolean = false, firstZero: boolean = true) => {
+      data = firstZero ? rmFirstZero(data.replace(/[^\d]/g, '')) : data.replace(/[^\d]/g, '');
+      return addComma ? insertComma(data) : data;
+    };
+    /**
+     * 문자열 앞 '0' 모두 제거
+     * @param str '0' 을 제거할 문자열
+     * @returns
+     */
+    const rmFirstZero = (str: string) => {
+      return new RegExp(/^[0]*$/).test(str) ? '0' : str.replace(/^0+/, '');
+    };
+  }
+
   /* ==========
    * Check
    * ========== */
