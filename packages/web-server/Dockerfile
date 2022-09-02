@@ -8,19 +8,4 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-# 빌드 
-RUN yarn run admin-build
-
-########################################################################
-#             stage-1 : 빌드된 어플리케이션 nginx로 제공                 #
-########################################################################
-FROM nginx:1.21.6-alpine
-
-# state:0에서 빌드된 파일을 /var/www/http 로 가져오는 법
-COPY --from=0 /usr/src/app/packages/admin/build /var/www/http
-# nginx 설정파일 가져옴
-COPY ./nginx.conf /etc/nginx/conf.d/default.conf
-
-CMD ["nginx", "-g",  "daemon off;"]
-
-# CMD ["yarn", "run", "admin-start:3000"]
+CMD ["yarn", "run", "web-start"]

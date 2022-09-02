@@ -7,7 +7,7 @@
   "scripts": {
     "----- Web Server -----": "",
     "web-start": "cd packages/web-server && react-scripts start",
-    "web-build": "cd packages/web-server && react-scripts build",
+    "web-build": "docker build -f packages/web-server .",
     "----- Back Server -----": "",
     "back-start": "cd packages/back-server && nodemon --exec ts-node src/index.ts",
     "----- All Server -----": "",

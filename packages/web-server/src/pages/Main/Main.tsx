@@ -16,7 +16,6 @@ import Pikaboo from 'component/Pikaboo';
 import PumpkinPikachu from 'component/PumpkinPikachu';
 import { useParams } from 'react-router-dom';
 import Util from 'common/util';
-import { now } from 'lodash';
 
 type RocketcherInfoType = {
   huntTotal: string;
