@@ -8,7 +8,6 @@
 --------------------------------------------------------------------------------------------------------------------------------------------*/
 import React from 'react';
 import axios from 'axios';
-import { Button } from 'antd';
 import Eevee from 'component/Eevee';
 import PokemonFriends from 'component/PokemonFriends';
 import MysteriousGarden from 'component/MysteriousGarden';
