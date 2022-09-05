@@ -62,8 +62,10 @@ function Main(props: MainProps) {
 
   /* ====== API ====== */
   const getInfo = () => {
-    const url = 'http://localhost:9999';
-    console.log('--> Get Info');
+    const split = window.location.origin.split(':');
+    const domain = `${split[0]}:${split[1]}`;
+    const url = `${domain}:9999`;
+    console.log('--> Get Info ' + domain);
 
     axios
       .get(`${url}/show/${username}`)
