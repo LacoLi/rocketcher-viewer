@@ -54,6 +54,7 @@
           font-weight: bold;
           font-size: 2.2rem;
           color: getColor(gold-5);
+          padding-top: 10px;
 
           display: grid;
           grid-template-columns: max-content auto;
@@ -86,7 +87,7 @@
 
 @media (max-width: 1200px) {
   html {
-    font-size: 7px;
+    font-size: 9px;
   }
 
   [data-page='main'] {
