@@ -60,7 +60,7 @@ namespace Util {
      */
     export const insertComma = (data: string | number) => {
       let str = typeof data === 'number' ? data.toString() : onlyNumber(data);
-      return str.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',');
+      return str.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
     };
 
     interface IOnlyNumber {
