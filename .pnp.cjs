@@ -14564,6 +14564,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-audio-player", [\
+        ["npm:0.17.0", {\
+          "packageLocation": "./.yarn/cache/react-audio-player-npm-0.17.0-e098631967-03042c6ed6.zip/node_modules/react-audio-player/",\
+          "packageDependencies": [\
+            ["react-audio-player", "npm:0.17.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:6c5baed929944d71e78f1c65f50e5e60ff0cefa3f434edd12314544c07b2a2937a62c7e7547298964cf63a4800999d2192f21f9b1bd79b2df7183a845d4bfefa#npm:0.17.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-audio-player-virtual-a6a548f255/0/cache/react-audio-player-npm-0.17.0-e098631967-03042c6ed6.zip/node_modules/react-audio-player/",\
+          "packageDependencies": [\
+            ["react-audio-player", "virtual:6c5baed929944d71e78f1c65f50e5e60ff0cefa3f434edd12314544c07b2a2937a62c7e7547298964cf63a4800999d2192f21f9b1bd79b2df7183a845d4bfefa#npm:0.17.0"],\
+            ["@types/react", "npm:18.0.18"],\
+            ["@types/react-dom", "npm:18.0.6"],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.3.0-next-e61fd91f5-20220630"],\
+            ["react-dom", "virtual:6c5baed929944d71e78f1c65f50e5e60ff0cefa3f434edd12314544c07b2a2937a62c7e7547298964cf63a4800999d2192f21f9b1bd79b2df7183a845d4bfefa#npm:18.3.0-next-e61fd91f5-20220630"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-dev-utils", [\
         ["npm:12.0.1", {\
           "packageLocation": "./.yarn/cache/react-dev-utils-npm-12.0.1-83ba06e3ee-2c6917e47f.zip/node_modules/react-dev-utils/",\
@@ -16991,6 +17018,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-react-app", "virtual:6c5baed929944d71e78f1c65f50e5e60ff0cefa3f434edd12314544c07b2a2937a62c7e7547298964cf63a4800999d2192f21f9b1bd79b2df7183a845d4bfefa#npm:7.0.1"],\
             ["gsap", "npm:3.11.0"],\
             ["react", "npm:18.3.0-next-e61fd91f5-20220630"],\
+            ["react-audio-player", "virtual:6c5baed929944d71e78f1c65f50e5e60ff0cefa3f434edd12314544c07b2a2937a62c7e7547298964cf63a4800999d2192f21f9b1bd79b2df7183a845d4bfefa#npm:0.17.0"],\
             ["react-dom", "virtual:6c5baed929944d71e78f1c65f50e5e60ff0cefa3f434edd12314544c07b2a2937a62c7e7547298964cf63a4800999d2192f21f9b1bd79b2df7183a845d4bfefa#npm:18.3.0-next-e61fd91f5-20220630"],\
             ["react-router-dom", "virtual:6c5baed929944d71e78f1c65f50e5e60ff0cefa3f434edd12314544c07b2a2937a62c7e7547298964cf63a4800999d2192f21f9b1bd79b2df7183a845d4bfefa#npm:6.3.0"],\
             ["react-scripts", "virtual:6c5baed929944d71e78f1c65f50e5e60ff0cefa3f434edd12314544c07b2a2937a62c7e7547298964cf63a4800999d2192f21f9b1bd79b2df7183a845d4bfefa#npm:5.0.1"],\

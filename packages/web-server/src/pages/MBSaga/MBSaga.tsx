@@ -7,6 +7,8 @@
  * 개정이력 :
 --------------------------------------------------------------------------------------------------------------------------------------------*/
 import React from 'react';
+import ReactAudioPlayer from 'react-audio-player';
+import ANT_DEN from '../../resource/sound/ant-den.mp3';
 
 interface MBSagaProps {}
 
@@ -63,6 +65,7 @@ function MBSaga(props: MBSagaProps) {
   return (
     <div data-page="mbSaga">
       <header>
+        <ReactAudioPlayer src={ANT_DEN} autoPlay loop controls />
         <div>
           <ul className="select-list">{headerHTML}</ul>
         </div>
