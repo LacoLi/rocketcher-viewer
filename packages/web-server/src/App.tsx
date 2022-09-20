@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/mbsaga" element={<Pages.MBSaga />} />
         <Route path="/:username" element={<Pages.Main />} />
       </Routes>
     </div>
